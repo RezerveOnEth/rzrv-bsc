@@ -1,0 +1,68 @@
+.Vault {
+  grid-area: Vault;
+  position: relative;
+  padding: 24px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+}
+
+.Vault::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: calc(100% - 30px);
+  position: absolute;
+  padding: 0;
+  margin: auto;
+  inset: 0;
+  background-color: #979797;
+}
+
+.Vault .Vault__column {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-row-gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Vault .Vault__value div {
+  font-weight: bold;
+  font-size: 22px;
+  color: #15181A;
+  display: block;
+  text-align: center;
+  transition: var(--transition);
+}
+
+@media (max-width: 1170px) {
+  .Vault {
+    padding: 16px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .Vault {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 16px;
+    grid-column-gap: 0;
+    grid-row-gap: 30px;
+  }
+
+  .Vault::before {
+    display: none;
+  }
+}
+
+[data-theme='dark'] .Vault .Vault__value div {
+  color: #f5f5f5;
+  transition: var(--transition);
+}

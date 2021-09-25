@@ -1,0 +1,124 @@
+.Status {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.Status::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.Status .Status__header .Status__connect:hover {
+  transition: var(--transition);
+  background-color: #eeeeee;
+}
+
+.Status .Status__header .Status__connect:active {
+  transition: var(--transition);
+  box-shadow: none;
+  background-color: #eeeeee;
+}
+
+.Status .Status__greeting {
+  margin-left: 110px;
+}
+
+.Status .Status__greeting .Status__title {
+  font-weight: 300;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.Status .Status__greeting .Status__title strong {
+  font-weight: 500;
+}
+
+.Status .Status__greeting .Status__subtitle {
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: normal;
+  margin-top: 16px;
+}
+
+.Status .Status__widgets {
+  display: grid;
+  grid-row-gap: 30px;
+  grid-column-gap: 56px;
+  grid-template-areas:
+    'Total Rate'
+    'Vault Rate';
+  justify-content: center;
+  margin-top: 15%;
+}
+
+.Status .Status__widgets > div {
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(19, 23, 31, 0.2);
+  border-radius: 20px;
+  max-width: 420px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.Status .Status__widgets > div span {
+  font-size: 16px;
+  color: #858997;
+  text-align: center;
+  width: 100%;
+  transition: var(--transition);
+}
+
+@media (max-width: 1280px) {
+  .Status .Status__greeting {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .Status .Status__greeting {
+    margin-left: 30px;
+  }
+
+  .Status .Status__widgets {
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    margin: 10% 30px 0 30px;
+  }
+}
+
+@media (max-width: 840px) {
+  .Status .Status__widgets {
+    grid-template-areas:
+    'Total'
+    'Vault'
+    'Rate';
+  }
+}
+
+@media (max-width: 640px) {
+  .Status .Status__greeting .Status__title {
+    font-size: 28px;
+  }
+
+  .Status .Status__greeting .Status__subtitle {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+}
+
+[data-theme='dark'] .Status .Status__widgets > div {
+  background: #212121;
+  transition: var(--transition);
+}
+
+[data-theme='dark'] .Status .Status__widgets > div span {
+  color: #e0e0e0;
+  transition: var(--transition);
+}

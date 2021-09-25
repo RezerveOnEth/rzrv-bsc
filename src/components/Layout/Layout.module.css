@@ -1,0 +1,27 @@
+.Layout {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.Layout::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 80%;
+  background-color: #397DFF;
+  border-bottom-left-radius: 200px;
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 0;
+  transition: var(--transition);
+}
+
+[data-theme='dark'] .Layout::before {
+  background-color: #555555;
+  transition: var(--transition);
+}
+

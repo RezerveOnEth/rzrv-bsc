@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@font-face {
+  font-family: 'Gazillions Script';
+  src: url('./assets/fonts/gazillions/Gazillions_Script.eot');
+  src: local('Gazillions Script'), local('GazillionsScript'),
+  url('./assets/fonts/gazillions/Gazillions_Script.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/gazillions/Gazillions_Script.woff') format('woff'),
+  url('./assets/fonts/gazillions/Gazillions_Script.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --transition: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.CircularProgressbar-trail {
+  stroke-width: 5 !important;
+}
+
+.CircularProgressbar-path {
+  stroke-width: 5 !important;
+}
+
+[data-theme='dark'] .web3modal-modal-card {
+  background-color: #212121 !important;
+}
+
+[data-theme='dark'] .web3modal-provider-container {
+  background-color: #212121 !important;
+}
+
+[data-theme='dark'] .web3modal-provider-container:hover {
+  background-color: #2a2a2a !important;
+}
+
+[data-theme='dark'] .web3modal-provider-name {
+  color: #f5f5f5 !important;
+}
+
+[data-theme='dark'] .walletconnect-modal__base {
+  background-color: #212121 !important;
+}
+
+[data-theme='dark'] .walletconnect-qrcode__text {
+  color: #f5f5f5 !important;
+}
+
+[data-theme='dark'] .walletconnect-modal__mobile__toggle {
+  background-color: #2a2a2a !important;
+  color: #f5f5f5 !important;
+}
+
+[data-theme='dark'] .walletconnect-modal__mobile__toggle_selector {
+  background-color: #212121 !important;
+}
+
+[data-theme='dark'] .walletconnect-modal__close__wrapper {
+  background-color: #212121 !important;
+}
+
+[data-theme='dark'] .walletconnect-modal__close__line1, .walletconnect-modal__close__line2 {
+  border-color: #f5f5f5 !important;
+}
+
+[data-theme='dark'] .walletconnect-modal__base__row:hover {
+  background-color: #2a2a2a !important;
+}
+
+[data-theme='dark'] .walletconnect-modal__base__row__h3 {
+  color: #f5f5f5 !important;
+}
+
+[data-theme='dark'] .walletconnect-modal__base__row__right__caret {
+  filter: brightness(0) invert(1);
+}

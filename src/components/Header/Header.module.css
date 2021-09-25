@@ -1,0 +1,39 @@
+.Header {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.Header .Header__connect {
+  background: #FFFFFF;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #858997;
+  transition: var(--transition);
+}
+
+@media (max-width: 640px) {
+  .Header {
+    padding: 16px;
+  }
+
+  .Header .Header__connect {
+    border-radius: 24px;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+[data-theme='dark'] .Header .Header__connect {
+  background: #212121;
+  color: #f5f5f5;
+  transition: var(--transition);
+}

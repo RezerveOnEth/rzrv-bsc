@@ -1,0 +1,230 @@
+.Navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 80px;
+}
+
+.Navbar .Navbar__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+.Navbar .Navbar__switcher {
+  margin: 0 auto 20px auto;
+  cursor: pointer;
+  width: 76px;
+  height: 40px;
+  background-color: #e0e0e0;
+  position: relative;
+  border-radius: 40px;
+}
+
+.Navbar .Navbar__switcher input {
+  position: absolute;
+  z-index: -1;
+}
+
+.Navbar .Navbar__switcher input ~ div {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  height: 36px;
+  width: 36px;
+  transition: var(--transition);
+  border-radius: 50%;
+  margin: auto;
+  transform: translateX(2px);
+  background: url('../../assets/images/sun.svg') no-repeat center center #212121;
+  background-size: 70%;
+}
+
+.Navbar .Navbar__switcher input:checked ~ div {
+  transform: translateX(38px);
+  transition: var(--transition);
+  background: url('../../assets/images/moon.svg') no-repeat center center #212121;
+  background-size: 70%;
+}
+
+.Navbar .Navbar__menu .Navbar__item_active a .Navbar__icon img, .Navbar .Navbar__menu .Navbar__item a .Navbar__icon img {
+  height: 20px;
+  width: 20px;
+}
+
+.Navbar .Navbar__logo img {
+  height: 96px;
+  width: 96px;
+}
+
+.Navbar .Navbar__logo span {
+  font-size: 16px;
+  color: #141821;
+  transition: var(--transition);
+}
+
+.Navbar .Navbar__menu {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.Navbar .Navbar__menu .Navbar__item, .Navbar .Navbar__menu .Navbar__item_active {
+  width: 240px;
+}
+
+.Navbar .Navbar__menu .Navbar__item_active a .Navbar__icon {
+  background-color: #0058FF;
+  transition: var(--transition);
+}
+
+.Navbar .Navbar__menu .Navbar__item_active a .Navbar__icon img {
+  filter: brightness(0) invert(1);
+  transition: var(--transition);
+}
+
+.Navbar .Navbar__menu .Navbar__item_active a span {
+  color: #0058FF;
+  transition: var(--transition);
+}
+
+.Navbar .Navbar__menu a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  margin: 2px 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Navbar .Navbar__menu a div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Navbar .Navbar__menu a .Navbar__icon {
+  height: 54px;
+  width: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 50% 50% 0;
+  margin-right: 16px;
+  transition: var(--transition);
+}
+
+.Navbar .Navbar__menu .Navbar__item a .Navbar__icon img {
+  transition: var(--transition);
+}
+
+.Navbar .Navbar__menu a span {
+  font-size: 14px;
+  color: #858997;
+  transition: var(--transition);
+}
+
+@media (max-width: 1280px) {
+  .Navbar {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 960px) {
+  .Navbar .Navbar__menu .Navbar__item, .Navbar .Navbar__menu .Navbar__item_active {
+    width: auto;
+  }
+
+  .Navbar .Navbar__menu a > img {
+    display: none;
+  }
+
+  .Navbar .Navbar__menu a > div > span {
+    display: none;
+  }
+
+  .Navbar .Navbar__logo > span {
+    display: none;
+  }
+
+  .Navbar .Navbar__logo {
+    margin-top: 12px;
+    margin-left: 12px;
+  }
+
+  .Navbar .Navbar__logo img {
+    height: 64px;
+    width: 64px;
+  }
+
+  .Navbar {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .Navbar {
+    margin-right: 8px;
+  }
+
+  .Navbar .Navbar__logo {
+    margin: 8px auto 0 auto;
+  }
+
+  .Navbar .Navbar__logo img {
+    height: 42px;
+    width: 42px;
+  }
+
+  .Navbar .Navbar__menu a .Navbar__icon {
+    height: 42px;
+    width: 42px;
+    margin-right: 0;
+  }
+
+  .Navbar .Navbar__logo img {
+    margin-right: 0;
+  }
+
+  .Navbar .Navbar__menu a {
+    margin: 6px 0;
+  }
+
+  .Navbar .Navbar__switcher {
+    margin: 0 auto 12px auto;
+    width: 60px;
+    height: 32px;
+    border-radius: 32px;
+  }
+
+  .Navbar .Navbar__switcher input ~ div {
+    height: 28px;
+    width: 28px;
+  }
+
+  .Navbar .Navbar__switcher input:checked ~ div {
+    transform: translateX(30px);
+  }
+}
+
+[data-theme='dark'] .Navbar .Navbar__logo span {
+  font-size: 16px;
+  color: #f5f5f5;
+  transition: var(--transition);
+}
+
+[data-theme='dark'] .Navbar .Navbar__menu .Navbar__item_active a .Navbar__icon {
+  background-color: #555555;
+  transition: var(--transition);
+}
+
+[data-theme='dark'] .Navbar .Navbar__menu .Navbar__item_active a span {
+  color: #555555;
+  transition: var(--transition);
+}
